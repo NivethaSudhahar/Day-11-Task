@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .star-rating input[type="radio"]:checked ~ label {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post" onsubmit="return redirect()">
+            
+<div class="input-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="input-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div><br>
+
+        
+
+            <label for="overall-experience">Overall Experience:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+<br>
+             <label for="question1"><b>how satisfied are you with:<b></label><br>
+
+<table>
+    <tr>
+      <th></th>
+      <th>Very Unsatisfied</th>
+      <th>Unsatisfied</th>
+      <th>Neutral</th>
+      <th>Satisfied</th>
+      <th>Very Satisfied</th>
+    </tr>
+    <tr>
+      <td><b>Purchase </b></td><br>
+      <td class="light-grey"><input type="radio" name="purchase_process" value="very_unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="purchase_process" value="unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="purchase_process" value="neutral"></td>
+      <td class="light-grey"><input type="radio" name="purchase_process" value="satisfied"></td>
+      <td class="light-grey"><input type="radio" name="purchase_process" value="very_satisfied"></td>
+    </tr>
+    <tr>
+      <td><b>Service</b></td>
+      <td><input type="radio" name="service" value="very_unsatisfied"></td>
+      <td><input type="radio" name="service" value="unsatisfied"></td>
+      <td><input type="radio" name="service" value="neutral"></td>
+      <td><input type="radio" name="service" value="satisfied"></td>
+      <td><input type="radio" name="service" value="very_satisfied"></td>
+    </tr>
+    <tr>
+      <td><b>Customer Service</b></td>
+      <td class="light-grey"><input type="radio" name="customer_service" value="very_unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="customer_service" value="unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="customer_service" value="neutral"></td>
+      <td class="light-grey"><input type="radio" name="customer_service" value="satisfied"></td>
+      <td class="light-grey"><input type="radio" name="customer_service" value="very_satisfied"></td>
+    </tr>
+  </table>
+<br>
+<br>
+<label for="question2"><b>how likely are you to:<b></label><br>
+<table>
+    <tr>
+      <th></th>
+      <th>Very Unlikely</th>
+      <th>Unlikely</th>
+      <th>Neutral</th>
+      <th>likely</th>
+      <th>Very likely</th>
+    </tr>
+    <tr>
+      <td><b>Buy Again</b></td><br>
+      <td class="light-grey"><input type="radio" name="buy again" value="very_unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="buy again" value="unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="buy again" value="neutral"></td>
+      <td class="light-grey"><input type="radio" name="buy again" value="satisfied"></td>
+      <td class="light-grey"><input type="radio" name="buy again" value="very_satisfied"></td>
+    </tr>
+    <tr>
+      <td><b>Recommend product to others</b></td>
+      <td><input type="radio" name="Recommend product" value="very_unsatisfied"></td>
+      <td><input type="radio" name="Recommend product" value="unsatisfied"></td>
+      <td><input type="radio" name="Recommend product" value="neutral"></td>
+      <td><input type="radio" name="Recommend product" value="satisfied"></td>
+      <td><input type="radio" name="Recommend product" value="very_satisfied"></td>
+    </tr>
+    <tr>
+      <td><b>Recommend Company to others</b></td>
+      <td class="light-grey"><input type="radio" name="Recommend Company" value="very_unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="Recommend Company" value="unsatisfied"></td>
+      <td class="light-grey"><input type="radio" name="Recommend Company" value="neutral"></td>
+      <td class="light-grey"><input type="radio" name="Recommend Company" value="satisfied"></td>
+      <td class="light-grey"><input type="radio" name="Recommend Company" value="very_satisfied"></td>
+    </tr>
+  </table>
+<br>
+
+ <label for="comments">Additional Comments or Suggestion:</label><br>
+  <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function redirect() {
+            alert("Response Submitted");
+            // Redirect to the "Response Submitted" page
+            window.location.href = "response_submitted.html";
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
